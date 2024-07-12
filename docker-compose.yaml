@@ -3,8 +3,11 @@ services:
     image: libnamic/omeka-s
     ports:
       - "8081:80"
-    volumes:
-      - ./config/database.ini:/var/www/html/config/database.ini
+    environment:
+      DATABASE_HOST: db
+      DATABASE_USERNAME: omeka_user
+      DATABASE_PASSWORD: omeka_password
+      DATABASE_DBNAME: omeka_db
     depends_on:
       - db
 
