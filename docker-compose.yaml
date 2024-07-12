@@ -2,7 +2,7 @@ services:
   omeka:
     image: libnamic/omeka-s
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./config/database.ini:/var/www/html/config/database.ini
     depends_on:
